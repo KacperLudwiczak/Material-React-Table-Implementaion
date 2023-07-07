@@ -4,10 +4,8 @@ import { data } from "./data"; // Import the data from the separate file
 
 // example data type
 type Person = {
-  name: {
-    firstName: string;
-    lastName: string;
-  };
+  firstName: string;
+  lastName: string;
   address: string;
   city: string;
   state: string;
@@ -18,12 +16,12 @@ const Table = () => {
   const memoizedColumns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
       {
-        accessorKey: "name.firstName",
+        accessorKey: "firstName",
         header: "First Name",
         size: 150,
       },
       {
-        accessorKey: "name.lastName",
+        accessorKey: "lastName",
         header: "Last Name",
         size: 150,
       },
@@ -57,6 +55,9 @@ const Table = () => {
       enablePinning
       enableRowActions
       enableRowSelection
+      enableExpanding
+      enableExpandAll
+      enableGlobalFilterModes
     />
   );
 };

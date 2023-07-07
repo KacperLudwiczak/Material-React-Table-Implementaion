@@ -1,192 +1,527 @@
 export const data = [
   {
-    userId: "3f25309c-8fa1-470f-811e-cdb082ab9017",
-    name: {
-      firstName: "John",
-      lastName: "Doe",
-    },
+    firstName: "John",
+    lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Jane",
-      lastName: "Doe",
-    },
+    firstName: "Jane",
+    lastName: "Doe",
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
+    subRows: [
+      {
+        firstName: "Trvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Dordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joe",
-      lastName: "Doe",
-    },
+    firstName: "Joe",
+    lastName: "Doe",
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Arvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Gane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Kevin",
-      lastName: "Vandy",
-    },
+    firstName: "Kevin",
+    lastName: "Vandy",
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joshua",
-      lastName: "Rolluffs",
-    },
+    firstName: "Joshua",
+    lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
     city: "Omaha",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Sarah",
-      lastName: "Smith",
-    },
+    firstName: "Sarah",
+    lastName: "Smith",
     address: "123 Main St",
     city: "Los Angeles",
     state: "California",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Michael",
-      lastName: "Johnson",
-    },
+    firstName: "Michael",
+    lastName: "Johnson",
     address: "456 Elm St",
     city: "New York",
     state: "New York",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Drake",
-      lastName: "Doe",
-    },
+    firstName: "Drake",
+    lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Jane",
-      lastName: "Doe",
-    },
+    firstName: "Jane",
+    lastName: "Doe",
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joe",
-      lastName: "Doe",
-    },
+    firstName: "Joe",
+    lastName: "Doe",
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Kevin",
-      lastName: "Vandy",
-    },
+    firstName: "Kevin",
+    lastName: "Vandy",
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joshua",
-      lastName: "Rolluffs",
-    },
+    firstName: "Joshua",
+    lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
     city: "Omaha",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Sarah",
-      lastName: "Smith",
-    },
+    firstName: "Sarah",
+    lastName: "Smith",
     address: "123 Main St",
     city: "Los Angeles",
     state: "California",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Michael",
-      lastName: "Johnson",
-    },
+    firstName: "Michael",
+    lastName: "Johnson",
     address: "456 Elm St",
     city: "New York",
     state: "New York",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Tom",
-      lastName: "Doe",
-    },
+    firstName: "Tom",
+    lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Jane",
-      lastName: "Doe",
-    },
+    firstName: "Jane",
+    lastName: "Doe",
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joe",
-      lastName: "Doe",
-    },
+    firstName: "Joe",
+    lastName: "Doe",
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Kevin",
-      lastName: "Vandy",
-    },
+    firstName: "Kevin",
+    lastName: "Vandy",
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Joshua",
-      lastName: "Rolluffs",
-    },
+    firstName: "Joshua",
+    lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
     city: "Omaha",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Sarah",
-      lastName: "Smith",
-    },
+    firstName: "Sarah",
+    lastName: "Smith",
     address: "123 Main St",
     city: "Los Angeles",
     state: "California",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
-    name: {
-      firstName: "Michael",
-      lastName: "Johnson",
-    },
+    firstName: "Michael",
+    lastName: "Johnson",
     address: "456 Elm St",
     city: "New York",
     state: "New York",
+    subRows: [
+      {
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
 ];
