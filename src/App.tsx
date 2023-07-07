@@ -7,6 +7,8 @@ function App() {
     <>
       <Header />
       <Table />
+
+      <h3>When, I edit a row, I can't later use accordion.</h3>
     </>
   );
 }

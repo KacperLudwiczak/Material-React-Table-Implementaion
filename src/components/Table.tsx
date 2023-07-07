@@ -1,5 +1,9 @@
-import React, { useMemo } from "react";
-import { MaterialReactTable, type MRT_ColumnDef } from "material-react-table";
+import React, { useMemo, useState } from "react";
+import {
+  MaterialReactTable,
+  type MRT_ColumnDef,
+  type MaterialReactTableProps,
+} from "material-react-table";
 import { data } from "./data"; // Import the data from the separate file
 
 // example data type
@@ -44,10 +48,23 @@ const Table = () => {
     []
   );
 
+  const [tableData, setTableData] = useState<Person[]>(() => data);
+
+  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] =
+    async ({ exitEditingMode, row, values }) => {
+      // Create a copy of the tableData array
+      const newData = [...tableData];
+      // Update the specific row with the new values
+      newData[row.index] = values;
+      // Update the state with the new data
+      setTableData(newData);
+      exitEditingMode(); // required to exit editing mode
+    };
+
   return (
     <MaterialReactTable
       columns={memoizedColumns}
-      data={data}
+      data={tableData}
       enableStickyHeader
       enableColumnFilterModes
       enableColumnOrdering
@@ -58,6 +75,9 @@ const Table = () => {
       enableExpanding
       enableExpandAll
       enableGlobalFilterModes
+      editingMode="modal"
+      enableEditing
+      onEditingRowSave={handleSaveRow}
     />
   );
 };

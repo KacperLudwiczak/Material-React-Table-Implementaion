@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => {
-  return <h2>Material React Table</h2>;
+  return <h1>Material React Table</h1>;
 };
 
 export default Header;
