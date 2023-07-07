@@ -46,7 +46,19 @@ const Table = () => {
     []
   );
 
-  return <MaterialReactTable columns={memoizedColumns} data={data} />;
+  return (
+    <MaterialReactTable
+      columns={memoizedColumns}
+      data={data}
+      enableStickyHeader
+      enableColumnFilterModes
+      enableColumnOrdering
+      enableGrouping
+      enablePinning
+      enableRowActions
+      enableRowSelection
+    />
+  );
 };
 
 export default Table;
