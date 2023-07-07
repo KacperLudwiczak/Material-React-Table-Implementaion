@@ -3,6 +3,7 @@ import {
   MaterialReactTable,
   type MRT_ColumnDef,
   type MaterialReactTableProps,
+  MRT_Row,
 } from "material-react-table";
 import { data } from "./data"; // Import the data from the separate file
 
@@ -78,6 +79,23 @@ const Table = () => {
       editingMode="modal"
       enableEditing
       onEditingRowSave={handleSaveRow}
+      autoResetPageIndex={false}
+      enableRowOrdering
+      enableSorting={false}
+      muiTableBodyRowDragHandleProps={({ table, row }) => ({
+        onDragEnd: () => {
+          const { draggingRow, hoveredRow } = table.getState();
+          if (hoveredRow && draggingRow) {
+            const updatedData = [...tableData];
+            updatedData.splice(
+              (hoveredRow as MRT_Row<Person>).index,
+              0,
+              updatedData.splice(draggingRow.index, 1)[0]
+            );
+            setTableData(updatedData);
+          }
+        },
+      })}
     />
   );
 };

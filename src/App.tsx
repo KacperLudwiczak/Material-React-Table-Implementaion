@@ -9,6 +9,10 @@ function App() {
       <Table />
 
       <h3>When, I edit a row, I can't later use accordion.</h3>
+      <h3>
+        I have lots of red line errors in "Table.tsx" with "Row Ordering" part,
+        but the code works for that section.
+      </h3>
     </>
   );
 }
