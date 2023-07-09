@@ -14,6 +14,7 @@ type Person = {
   address: string;
   city: string;
   state: string;
+  subRows?: Person[];
 };
 
 const Table = () => {
@@ -51,16 +52,16 @@ const Table = () => {
 
   const [tableData, setTableData] = useState<Person[]>(() => data);
 
-  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] =
-    async ({ exitEditingMode, row, values }) => {
-      // Create a copy of the tableData array
-      const newData = [...tableData];
-      // Update the specific row with the new values
-      newData[row.index] = values;
-      // Update the state with the new data
-      setTableData(newData);
-      exitEditingMode(); // required to exit editing mode
-    };
+  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] = ({
+    exitEditingMode,
+    row,
+    values,
+  }) => {
+    const newData = [...tableData];
+    newData[row.index] = values;
+    setTableData(newData);
+    exitEditingMode();
+  };
 
   return (
     <MaterialReactTable
@@ -77,12 +78,12 @@ const Table = () => {
       enableExpandAll
       enableGlobalFilterModes
       editingMode="modal"
-      enableEditing
+      enableEditing={true}
       onEditingRowSave={handleSaveRow}
       autoResetPageIndex={false}
       enableRowOrdering
       enableSorting={false}
-      muiTableBodyRowDragHandleProps={({ table, row }) => ({
+      muiTableBodyRowDragHandleProps={({ table }) => ({
         onDragEnd: () => {
           const { draggingRow, hoveredRow } = table.getState();
           if (hoveredRow && draggingRow) {

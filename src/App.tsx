@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Table from "./components/Table";
+import SimpleTable from "./components/SimpleTable";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         I have lots of red line errors in "Table.tsx" with "Row Ordering" part,
         but the code works for that section.
       </h3>
+
+      <SimpleTable />
     </>
   );
 }
