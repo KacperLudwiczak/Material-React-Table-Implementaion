@@ -48,6 +48,24 @@ const initData: Person[] = [
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
+    subRows: [
+      {
+        firstName: "Drvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Gordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
     firstName: "Joe",
@@ -55,6 +73,24 @@ const initData: Person[] = [
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Grvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Hordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
     firstName: "Kevin",
@@ -62,6 +98,24 @@ const initData: Person[] = [
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Holrvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Waordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
     firstName: "Joshua",
@@ -69,6 +123,174 @@ const initData: Person[] = [
     address: "32188 Larkin Turnpike",
     city: "Charleston",
     state: "South Carolina",
+    subRows: [
+      {
+        firstName: "Qvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Dane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Doe",
+    lastName: "Game",
+    address: "566 Brakus Inlet",
+    city: "South Linda",
+    state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Grvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Hordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Evin",
+    lastName: "Vandy",
+    address: "722 Emie Stream",
+    city: "Lincoln",
+    state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Holrvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Waordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Joshua",
+    lastName: "Rolluffs",
+    address: "32188 Larkin Turnpike",
+    city: "Charleston",
+    state: "South Carolina",
+    subRows: [
+      {
+        firstName: "Qvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Dane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Doe",
+    lastName: "Game",
+    address: "566 Brakus Inlet",
+    city: "South Linda",
+    state: "West Virginia",
+    subRows: [
+      {
+        firstName: "Grvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Hordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Evin",
+    lastName: "Vandy",
+    address: "722 Emie Stream",
+    city: "Lincoln",
+    state: "Nebraska",
+    subRows: [
+      {
+        firstName: "Holrvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Waordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    firstName: "Gshua",
+    lastName: "Rolluffs",
+    address: "32188 Larkin Turnpike",
+    city: "Charleston",
+    state: "South Carolina",
+    subRows: [
+      {
+        firstName: "Qvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            firstName: "Dane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
 ];
 
