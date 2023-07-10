@@ -13,6 +13,24 @@ const initData = [
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
+    // subRows: [
+    //   {
+    //     firstName: "Ervin",
+    //     lastName: "Reinger",
+    //     address: "566 Brakus Inlet",
+    //     city: "South Linda",
+    //     state: "West Virginia",
+    //     subRows: [
+    //       {
+    //         firstName: "Jordane",
+    //         lastName: "Homenick",
+    //         address: "1234 Brakus Inlet",
+    //         city: "South Linda",
+    //         state: "West Virginia",
+    //       },
+    //     ],
+    //   },
+    // ],
   },
   {
     firstName: "Jane",
