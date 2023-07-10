@@ -168,7 +168,7 @@ const SimpleTable = () => {
     if (row.original) {
       // Update existing row
       const updatedData = [...data];
-      updatedData[row.index] = values;
+      updatedData[row.index] = { ...values, subRows: row.original.subRows };
       setData(updatedData);
     } else {
       // Add new row
