@@ -1,52 +1,43 @@
 import React, { useMemo, useState } from "react";
 import {
   MaterialReactTable,
+  type MaterialReactTableProps,
   type MRT_ColumnDef,
   type MRT_Row,
 } from "material-react-table";
 
 const initData = [
   {
-    name: {
-      firstName: "John",
-      lastName: "Doe",
-    },
+    firstName: "John",
+    lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
   },
   {
-    name: {
-      firstName: "Jane",
-      lastName: "Woed",
-    },
+    firstName: "Jane",
+    lastName: "Woed",
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
   },
   {
-    name: {
-      firstName: "Joe",
-      lastName: "Game",
-    },
+    firstName: "Joe",
+    lastName: "Game",
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
   },
   {
-    name: {
-      firstName: "Kevin",
-      lastName: "Vandy",
-    },
+    firstName: "Kevin",
+    lastName: "Vandy",
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
   },
   {
-    name: {
-      firstName: "Joshua",
-      lastName: "Rolluffs",
-    },
+    firstName: "Joshua",
+    lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
     city: "Charleston",
     state: "South Carolina",
@@ -55,10 +46,8 @@ const initData = [
 
 // example data type
 type Person = {
-  name: {
-    firstName: string;
-    lastName: string;
-  };
+  firstName: string;
+  lastName: string;
   address: string;
   city: string;
   state: string;
@@ -71,12 +60,12 @@ const SimpleTable = () => {
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
       {
-        accessorKey: "name.firstName",
+        accessorKey: "firstName",
         header: "First Name",
         size: 150,
       },
       {
-        accessorKey: "name.lastName",
+        accessorKey: "lastName",
         header: "Last Name",
         size: 150,
       },
@@ -99,6 +88,18 @@ const SimpleTable = () => {
     []
   );
 
+  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] = ({
+    exitEditingMode,
+    row,
+    values,
+  }) => {
+    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here.
+    data[row.index] = values;
+    //send/receive api updates here
+    setData([...data]);
+    exitEditingMode(); //required to exit editing mode
+  };
+
   return (
     <MaterialReactTable
       columns={columns}
@@ -113,9 +114,10 @@ const SimpleTable = () => {
       enableExpanding
       enableExpandAll
       enableGlobalFilterModes
-      // editingMode="modal"
-      // enableEditing={true}
-      // autoResetPageIndex={false}
+      editingMode="modal"
+      enableEditing={true}
+      onEditingRowSave={handleSaveRow}
+      autoResetPageIndex={false}
       enableRowOrdering
       enableSorting={false}
       muiTableBodyRowDragHandleProps={({ table }) => ({
