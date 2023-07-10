@@ -20,6 +20,7 @@ function App() {
       <SimpleTable />
 
       <h3>Testing:</h3>
+      <h3>Problem: After edit any subrow, it goes in first row.</h3>
       <SimpleTableTest />
     </>
   );
