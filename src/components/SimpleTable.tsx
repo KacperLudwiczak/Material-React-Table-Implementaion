@@ -1,7 +1,11 @@
-import React, { useMemo } from "react";
-import { MaterialReactTable, type MRT_ColumnDef } from "material-react-table";
+import React, { useMemo, useState } from "react";
+import {
+  MaterialReactTable,
+  type MRT_ColumnDef,
+  type MRT_Row,
+} from "material-react-table";
 
-const data = [
+const initData = [
   {
     name: {
       firstName: "John",
@@ -61,6 +65,8 @@ type Person = {
 };
 
 const SimpleTable = () => {
+  const [data, setData] = useState(() => initData);
+
   // should be memoized or stable
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
@@ -110,8 +116,21 @@ const SimpleTable = () => {
       // editingMode="modal"
       // enableEditing={true}
       // autoResetPageIndex={false}
-      // enableRowOrdering
-      // enableSorting={false}
+      enableRowOrdering
+      enableSorting={false}
+      muiTableBodyRowDragHandleProps={({ table }) => ({
+        onDragEnd: () => {
+          const { draggingRow, hoveredRow } = table.getState();
+          if (hoveredRow && draggingRow) {
+            data.splice(
+              (hoveredRow as MRT_Row<Person>).index,
+              0,
+              data.splice(draggingRow.index, 1)[0]
+            );
+            setData([...data]);
+          }
+        },
+      })}
     />
   );
 };
