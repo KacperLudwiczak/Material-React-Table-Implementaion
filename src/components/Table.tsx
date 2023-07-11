@@ -68,6 +68,7 @@ const Table = () => {
       columns={memoizedColumns} // This prop specifies the columns to be rendered in the table. It takes an array of column configurations, where memoizedColumns is likely a memoized value containing the column definitions.
       data={data} // This prop specifies the data to be displayed in the table. It takes an array of objects, where each object represents a row in the table. tableData is likely the data that should be rendered in the table.
       enableClickToCopy // It copy the item by clicking on it.
+      enableColumnResizing // Change the column width.
       enableStickyHeader // This prop enables sticky headers for the table. When enabled, the table header will remain fixed at the top of the table, even when scrolling.
       enableColumnFilterModes // This prop enables column filtering modes. It allows users to filter the table data based on column values using different filter modes.
       enableColumnOrdering // This prop enables column reordering. It allows users to change the order of columns in the table by dragging and dropping them.
