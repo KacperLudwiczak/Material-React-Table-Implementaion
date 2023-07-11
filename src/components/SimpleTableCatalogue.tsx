@@ -71,7 +71,7 @@ type Person = {
   state: string;
 };
 
-const SimpleTableEdit = () => {
+const SimpleTableCatalogue = () => {
   const [data, setData] = useState(() => initData);
 
   // should be memoized or stable
@@ -112,18 +112,6 @@ const SimpleTableEdit = () => {
     []
   );
 
-  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] = ({
-    exitEditingMode,
-    row,
-    values,
-  }) => {
-    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here.
-    data[row.index] = values;
-    //send/receive api updates here
-    setData([...data]);
-    exitEditingMode(); //required to exit editing mode
-  };
-
   return (
     <MaterialReactTable
       columns={columns}
@@ -133,13 +121,9 @@ const SimpleTableEdit = () => {
       enableColumnOrdering
       enableGrouping
       enablePinning
-      enableRowActions
       enableRowSelection
       enableExpandAll
       enableGlobalFilterModes
-      editingMode="modal"
-      enableEditing={true}
-      onEditingRowSave={handleSaveRow}
       autoResetPageIndex={false}
       enableRowOrdering
       muiTableBodyRowDragHandleProps={({ table }) => ({
@@ -162,4 +146,4 @@ const SimpleTableEdit = () => {
   );
 };
 
-export default SimpleTableEdit;
+export default SimpleTableCatalogue;

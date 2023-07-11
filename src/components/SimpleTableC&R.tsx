@@ -71,7 +71,7 @@ type Person = {
   state: string;
 };
 
-const SimpleTableEdit = () => {
+const SimpleTableCR = () => {
   const [data, setData] = useState(() => initData);
 
   // should be memoized or stable
@@ -162,4 +162,4 @@ const SimpleTableEdit = () => {
   );
 };
 
-export default SimpleTableEdit;
+export default SimpleTableCR;

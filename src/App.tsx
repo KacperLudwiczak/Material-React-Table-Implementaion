@@ -5,6 +5,8 @@ import SimpleTable from "./components/SimpleTable";
 import SimpleTableTest from "./components/test";
 import SimpleTableEdit from "./components/SimpleTableEdit";
 import SimpleTablePortfolio from "./components/SimpleTablePortfolio";
+import SimpleTableCR from "./components/SimpleTableC&R";
+import SimpleTableCatalogue from "./components/SimpleTableCatalogue";
 
 function App() {
   return (
@@ -27,12 +29,20 @@ function App() {
       </h3>
       <SimpleTablePortfolio />
 
-      <h3>Simple Edit Table:</h3>
+      <h3>Parametric Table:</h3>
+      <h3>Edit by "button"</h3>
       <SimpleTableEdit />
 
-      <h3>Testing:</h3>
+      <h3>Cost & Risk Table:</h3>
+      <h3>Edit by "button"</h3>
+      <SimpleTableCR />
+
+      <h3>Catalogue Table:</h3>
+      <SimpleTableCatalogue />
+
+      {/* <h3>Testing:</h3>
       <h3>Problem: After edit any subrow, it goes in first row.</h3>
-      <SimpleTableTest />
+      <SimpleTableTest /> */}
     </>
   );
 }

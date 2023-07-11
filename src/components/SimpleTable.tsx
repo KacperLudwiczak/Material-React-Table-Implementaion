@@ -311,6 +311,8 @@ const SimpleTable = () => {
       data={data}
       enableStickyHeader
       enableColumnFilterModes
+      enableColumnOrdering
+      enableGrouping
       enablePinning
       enableRowSelection
       enableExpanding
