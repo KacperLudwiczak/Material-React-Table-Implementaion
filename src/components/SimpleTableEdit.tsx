@@ -81,6 +81,9 @@ const SimpleTableEdit = () => {
         accessorKey: "firstName",
         header: "First Name",
         size: 150,
+        // enableEditing: (row) => boolean,
+        // editVariant: "select",
+        // editSelectOptions: {text: string; value: string},
       },
       {
         accessorKey: "lastName",

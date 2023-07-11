@@ -40,9 +40,9 @@ function App() {
       <h3>Catalogue Table:</h3>
       <SimpleTableCatalogue />
 
-      {/* <h3>Testing:</h3>
+      <h3>Testing:</h3>
       <h3>Problem: After edit any subrow, it goes in first row.</h3>
-      <SimpleTableTest /> */}
+      <SimpleTableTest />
     </>
   );
 }

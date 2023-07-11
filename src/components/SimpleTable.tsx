@@ -309,6 +309,7 @@ const SimpleTable = () => {
     <MaterialReactTable
       columns={columns}
       data={data}
+      enableClickToCopy
       enableStickyHeader
       enableColumnFilterModes
       enableColumnOrdering

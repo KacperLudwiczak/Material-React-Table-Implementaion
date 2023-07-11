@@ -1,4 +1,4 @@
-export const data = [
+export const initData = [
   {
     id: "d6gn54f6d45j",
     firstName: "John",

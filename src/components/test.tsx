@@ -8,25 +8,13 @@ import {
 
 const initData = [
   {
-    id: "as2s",
     firstName: "John",
     lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
-    subRows: [
-      {
-        id: "od43zjn",
-        firstName: "Ervin",
-        lastName: "Reinger",
-        address: "566 Brakus Inlet",
-        city: "South Linda",
-        state: "West Virginia",
-      },
-    ],
   },
   {
-    id: "ba72s",
     firstName: "Jane",
     lastName: "Woed",
     address: "769 Dominic Grove",
@@ -34,7 +22,6 @@ const initData = [
     state: "Ohio",
   },
   {
-    id: "fs1s2s",
     firstName: "Joe",
     lastName: "Game",
     address: "566 Brakus Inlet",
@@ -42,7 +29,6 @@ const initData = [
     state: "West Virginia",
   },
   {
-    id: "f8gas2s",
     firstName: "Kevin",
     lastName: "Vandy",
     address: "722 Emie Stream",
@@ -50,7 +36,6 @@ const initData = [
     state: "Nebraska",
   },
   {
-    id: "q2was2s",
     firstName: "Joshua",
     lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
@@ -61,7 +46,6 @@ const initData = [
 
 // example data type
 type Person = {
-  id: string;
   firstName: string;
   lastName: string;
   address: string;
@@ -69,7 +53,7 @@ type Person = {
   state: string;
 };
 
-const SimpleTableTest = () => {
+const SimpleTableEdit = () => {
   const [data, setData] = useState(() => initData);
 
   // should be memoized or stable
@@ -79,26 +63,47 @@ const SimpleTableTest = () => {
         accessorKey: "firstName",
         header: "First Name",
         size: 150,
+        editVariant: "text",
+        enableEditing: true,
       },
       {
         accessorKey: "lastName",
         header: "Last Name",
         size: 150,
+        editVariant: "text",
+        enableEditing: true,
       },
       {
-        accessorKey: "address",
-        header: "Address",
-        size: 200,
-      },
-      {
-        accessorKey: "city",
-        header: "City",
-        size: 150,
-      },
-      {
-        accessorKey: "state",
-        header: "State",
-        size: 150,
+        header: "Information",
+        size: 450,
+        columns: [
+          {
+            accessorKey: "address",
+            header: "Address",
+            size: 150,
+            editVariant: "text",
+            enableEditing: true,
+          },
+          {
+            accessorKey: "city",
+            header: "City",
+            size: 150,
+            editVariant: "text",
+            enableEditing: true,
+          },
+          {
+            accessorKey: "state",
+            header: "State",
+            size: 150,
+            editVariant: "select",
+            editSelectOptions: [
+              "Option 1",
+              "Option 2",
+              { text: "Option 3", value: "option_3" },
+            ],
+            enableEditing: true,
+          },
+        ],
       },
     ],
     []
@@ -109,11 +114,9 @@ const SimpleTableTest = () => {
     row,
     values,
   }) => {
-    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here.
     data[row.index] = values;
-    //send/receive api updates here
     setData([...data]);
-    exitEditingMode(); //required to exit editing mode
+    exitEditingMode();
   };
 
   return (
@@ -127,7 +130,6 @@ const SimpleTableTest = () => {
       enablePinning
       enableRowActions
       enableRowSelection
-      enableExpanding
       enableExpandAll
       enableGlobalFilterModes
       editingMode="modal"
@@ -135,13 +137,12 @@ const SimpleTableTest = () => {
       onEditingRowSave={handleSaveRow}
       autoResetPageIndex={false}
       enableRowOrdering
-      enableSorting={false}
       muiTableBodyRowDragHandleProps={({ table }) => ({
         onDragEnd: () => {
           const { draggingRow, hoveredRow } = table.getState();
           if (hoveredRow && draggingRow) {
             data.splice(
-              (hoveredRow as MRT_Row<Person>).index,
+              Number(hoveredRow.index),
               0,
               data.splice(draggingRow.index, 1)[0]
             );
@@ -153,4 +154,4 @@ const SimpleTableTest = () => {
   );
 };
 
-export default SimpleTableTest;
+export default SimpleTableEdit;
