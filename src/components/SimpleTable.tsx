@@ -8,57 +8,256 @@ import {
 
 const initData = [
   {
+    id: "d6gn54f6d45j",
     firstName: "John",
     lastName: "Doe",
     address: "261 Erdman Ford",
     city: "East Daphne",
     state: "Kentucky",
-    // subRows: [
-    //   {
-    //     firstName: "Ervin",
-    //     lastName: "Reinger",
-    //     address: "566 Brakus Inlet",
-    //     city: "South Linda",
-    //     state: "West Virginia",
-    //     subRows: [
-    //       {
-    //         firstName: "Jordane",
-    //         lastName: "Homenick",
-    //         address: "1234 Brakus Inlet",
-    //         city: "South Linda",
-    //         state: "West Virginia",
-    //       },
-    //     ],
-    //   },
-    // ],
+    subRows: [
+      {
+        id: "d6gn54flugf6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "d6465fdgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
+    id: "d6m53dty5tk4dxgn54f6d45j",
     firstName: "Jane",
-    lastName: "Woed",
+    lastName: "Doe",
     address: "769 Dominic Grove",
     city: "Columbus",
     state: "Ohio",
+    subRows: [
+      {
+        id: "d6m53dty5tk4d444sssd45j",
+        firstName: "Trvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "d6m53dtyddddddddddxgn54f6d45j",
+            firstName: "Dordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
+    id: "d6m53dty5tk455ddddxbbbn54f6d45j",
     firstName: "Joe",
-    lastName: "Game",
+    lastName: "Doe",
     address: "566 Brakus Inlet",
     city: "South Linda",
     state: "West Virginia",
+    subRows: [
+      {
+        id: "jjjjj53dty5tk4dxgn54f6d45j",
+        firstName: "Arvin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "kkkkty5tk4dxgn54f6d45j",
+            firstName: "Gane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
+    id: "dksfdjhfrrrrrdxgn54f6d45j",
     firstName: "Kevin",
     lastName: "Vandy",
     address: "722 Emie Stream",
     city: "Lincoln",
     state: "Nebraska",
+    subRows: [
+      {
+        id: "lllllllllty5tk4dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "d6m53dty5t555555fffff",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
   {
+    id: "slgjjjjjjssssssjksgbtk4dxgn54f6d45j",
     firstName: "Joshua",
     lastName: "Rolluffs",
     address: "32188 Larkin Turnpike",
-    city: "Charleston",
-    state: "South Carolina",
+    city: "Omaha",
+    state: "Nebraska",
+    subRows: [
+      {
+        id: "sbljigsh54vd5dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "dnjblfj5j1k4dxgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "ccntk4dxgn54f6d45j",
+    firstName: "Sarah",
+    lastName: "Smith",
+    address: "123 Main St",
+    city: "Los Angeles",
+    state: "California",
+    subRows: [
+      {
+        id: "tsdty5tk4dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "qdad5tk4dxgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "xgfdtk4dxgn54f6d45j",
+    firstName: "Michael",
+    lastName: "Johnson",
+    address: "456 Elm St",
+    city: "New York",
+    state: "New York",
+    subRows: [
+      {
+        id: "nfhfjk4dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "15d4g5d5tk4dxgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "fjrh64r5tk4dxgn54f6d45j",
+    firstName: "Drake",
+    lastName: "Doe",
+    address: "261 Erdman Ford",
+    city: "East Daphne",
+    state: "Kentucky",
+    subRows: [
+      {
+        id: "dfgjjjjjjjjjjj5tk4dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "54df4h5tk4dxgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "lwds4556stk4dxgn54f6d45j",
+    firstName: "Jane",
+    lastName: "Doe",
+    address: "769 Dominic Grove",
+    city: "Columbus",
+    state: "Ohio",
+    subRows: [
+      {
+        id: "ouy444k4dxgn54f6d45j",
+        firstName: "Ervin",
+        lastName: "Reinger",
+        address: "566 Brakus Inlet",
+        city: "South Linda",
+        state: "West Virginia",
+        subRows: [
+          {
+            id: "cbcb5434dxgn54f6d45j",
+            firstName: "Jordane",
+            lastName: "Homenick",
+            address: "1234 Brakus Inlet",
+            city: "South Linda",
+            state: "West Virginia",
+          },
+        ],
+      },
+    ],
   },
 ];
 
@@ -106,38 +305,19 @@ const SimpleTable = () => {
     []
   );
 
-  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] = ({
-    exitEditingMode,
-    row,
-    values,
-  }) => {
-    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here.
-    data[row.index] = values;
-    //send/receive api updates here
-    setData([...data]);
-    exitEditingMode(); //required to exit editing mode
-  };
-
   return (
     <MaterialReactTable
       columns={columns}
       data={data}
       enableStickyHeader
       enableColumnFilterModes
-      enableColumnOrdering
-      enableGrouping
       enablePinning
-      enableRowActions
       enableRowSelection
       enableExpanding
       enableExpandAll
       enableGlobalFilterModes
-      editingMode="modal"
-      enableEditing={true}
-      onEditingRowSave={handleSaveRow}
       autoResetPageIndex={false}
       enableRowOrdering
-      enableSorting={false}
       muiTableBodyRowDragHandleProps={({ table }) => ({
         // This line declares a callback function that receives an object containing table as a parameter. It is used to extract the table property from the object. This property holds the state and functions of the table.
         onDragEnd: () => {
