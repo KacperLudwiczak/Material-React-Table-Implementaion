@@ -1,12 +1,20 @@
 import React, { useMemo, useState } from "react";
 import {
   MaterialReactTable,
-  type MaterialReactTableProps,
+  type MRT_Cell,
   type MRT_ColumnDef,
   type MRT_Row,
 } from "material-react-table";
 
-const initData = [
+type Person = {
+  firstName: string;
+  lastName: string;
+  address: string;
+  city: string;
+  state: string;
+};
+
+const initData: Person[] = [
   {
     firstName: "John",
     lastName: "Doe",
@@ -62,27 +70,18 @@ const initData = [
   },
 ];
 
-// example data type
-type Person = {
-  firstName: string;
-  lastName: string;
-  address: string;
-  city: string;
-  state: string;
-};
-
 const SimpleTableCR = () => {
-  const [data, setData] = useState(() => initData);
-
   // should be memoized or stable
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
       {
+        id: "firstName",
         accessorKey: "firstName",
         header: "First Name",
         size: 150,
       },
       {
+        id: "lastName",
         accessorKey: "lastName",
         header: "Last Name",
         size: 150,
@@ -92,42 +91,32 @@ const SimpleTableCR = () => {
         size: 450,
         columns: [
           {
+            id: "address",
             accessorKey: "address",
             header: "Address",
             size: 150,
           },
-          {
-            accessorKey: "city",
-            header: "City",
-            size: 150,
-          },
-          {
-            accessorKey: "state",
-            header: "State",
-            size: 150,
-          },
+          { id: "city", accessorKey: "city", header: "City", size: 150 },
+          { id: "state", accessorKey: "state", header: "State", size: 150 },
         ],
       },
     ],
     []
   );
 
-  const handleSaveRow: MaterialReactTableProps<Person>["onEditingRowSave"] = ({
-    exitEditingMode,
-    row,
-    values,
-  }) => {
-    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here.
-    data[row.index] = values;
+  const [data, setData] = useState<Person[]>(() => initData);
+
+  const handleSaveCell = (cell: MRT_Cell<Person>, value: string) => {
+    //if using flat data and simple accessorKeys/ids, you can just do a simple assignment here
+    data[cell.row.index][cell.column.id as keyof Person] = value;
     //send/receive api updates here
-    setData([...data]);
-    exitEditingMode(); //required to exit editing mode
+    setData([...data]); //re-render with new data
   };
 
   return (
     <MaterialReactTable
       columns={columns}
-      data={data}
+      data={initData}
       enableStickyHeader
       enableColumnFilterModes
       enableColumnOrdering
@@ -137,9 +126,13 @@ const SimpleTableCR = () => {
       enableRowSelection
       enableExpandAll
       enableGlobalFilterModes
-      editingMode="modal"
+      muiTableBodyCellEditTextFieldProps={({ cell }) => ({
+        onChange: (event) => {
+          handleSaveCell(cell, event.target.value);
+        },
+      })}
+      editingMode="cell"
       enableEditing={true}
-      onEditingRowSave={handleSaveRow}
       autoResetPageIndex={false}
       enableRowOrdering
       muiTableBodyRowDragHandleProps={({ table }) => ({

@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <Header />
+
       <Table />
 
       <h3>When, I edit a row, I can't later use accordion.</h3>
@@ -34,15 +35,26 @@ function App() {
       <SimpleTableEdit />
 
       <h3>Cost & Risk Table:</h3>
-      <h3>Edit by "button"</h3>
+      <h3>I can't save the edit</h3>
       <SimpleTableCR />
 
       <h3>Catalogue Table:</h3>
       <SimpleTableCatalogue />
 
       <h3>Testing:</h3>
-      <h3>Problem: After edit any subrow, it goes in first row.</h3>
       <SimpleTableTest />
+
+      {/* Custom Column Actions:
+      https://www.material-react-table.dev/?path=/story/features-column-action-examples--custom-column-actions
+      Edit by clicking:
+      https://www.material-react-table.dev/?path=/story/features-editing-examples--editing-enabled-edit-mode-cell
+      Age Filter "range-slider"
+      https://www.material-react-table.dev/?path=/story/features-filtering-examples--filter-fn-and-filter-variants-faceted
+      Gender Dropdown:
+      https://www.material-react-table.dev/?path=/story/features-filtering-examples--custom-filter-component
+      Loading Example:
+      https://www.material-react-table.dev/?path=/story/features-loading-examples--loading-with-selection
+     */}
     </>
   );
 }

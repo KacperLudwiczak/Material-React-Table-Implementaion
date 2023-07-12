@@ -78,15 +78,22 @@ const SimpleTableCatalogue = () => {
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
       {
-        accessorKey: "firstName",
-        header: "First Name",
-        size: 150,
+        header: "Name",
+        size: 300,
+        columns: [
+          {
+            accessorKey: "firstName",
+            header: "First Name",
+            size: 150,
+          },
+          {
+            accessorKey: "lastName",
+            header: "Last Name",
+            size: 150,
+          },
+        ],
       },
-      {
-        accessorKey: "lastName",
-        header: "Last Name",
-        size: 150,
-      },
+
       {
         header: "Information",
         size: 450,
@@ -116,6 +123,7 @@ const SimpleTableCatalogue = () => {
     <MaterialReactTable
       columns={columns}
       data={data}
+      enableColumnResizing
       enableStickyHeader
       enableColumnFilterModes
       enableColumnOrdering
